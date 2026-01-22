@@ -37,3 +37,7 @@ WORKDIR /var/lib/ghost
 # The adapter is configured via environment variables:
 # - storage__active=r2 activates the adapter
 # - storage__r2__* configures the R2 connection
+
+# Health check - verify Ghost is responding
+HEALTHCHECK --interval=30s --timeout=3s --start-period=30s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:2368/ghost/api/admin/site/ || exit 1
