@@ -37,7 +37,7 @@ jobs:
           tags: |
             type=raw,value=latest
             type=sha,prefix=
-            type=raw,value=6.18.0-r2
+            type=raw,value=6.19.1-r2
 
       - name: Build and push
         uses: docker/build-push-action@v5

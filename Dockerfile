@@ -12,7 +12,7 @@
 # Optional settings:
 #   imageOptimization__resize=false (recommended to disable Ghost's built-in resizing)
 
-FROM ghost:6.18.0-alpine3.23
+FROM ghost:6.19.1-alpine3.23
 
 # Install git for cloning adapter (will be removed after install)
 RUN apk add --no-cache --virtual .build-deps git
